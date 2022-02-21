@@ -36,6 +36,7 @@ dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.aeonbits.owner:owner:1.0.4",
             "com.codeborne:selenide:5.25.1"
     )
     testRuntimeOnly (

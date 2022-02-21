@@ -3,7 +3,9 @@ package bk.vaskevich.demoqa;
 import bk.vaskevich.helpers.Attach;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.CredentialsConfig;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -15,6 +17,8 @@ public class TestBase {
     @BeforeAll
     public static void init(){
         SelenideLogger.addListener("AllureSelenide",new AllureSelenide());
+
+        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
 
         String browser = System.getProperty("browser");
         String version = System.getProperty("version");
