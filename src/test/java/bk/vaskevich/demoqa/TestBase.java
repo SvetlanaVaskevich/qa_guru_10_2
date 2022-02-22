@@ -22,8 +22,8 @@ public class TestBase {
 
         String browser = System.getProperty("browser");
         String version = System.getProperty("version");
-        String login = System.getProperty("login","user1");
-        String password = System.getProperty("password","1234");
+        String login = config.login();
+        String password = config.password();
         String url = System.getProperty("url");
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
